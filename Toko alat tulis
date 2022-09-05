@@ -1,0 +1,41 @@
+package buratih;
+import java.util.Scanner;
+
+/**
+ *
+ * @author noteb
+ */
+public class Tugas4 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        String barang;
+        int harga=0,uang,kembalian;
+        
+        System.out.println("Selamat datang,silahkan berbelanja");
+        System.out.println("");
+        
+        System.out.println("Pilih barang: ");
+        System.out.println("1.Pensil per biji=2000");
+        System.out.println("2.Buku per biji=3000");
+        System.out.println("3.Penghapus per biji=500");
+        System.out.print("Masukkan pilihan: ");
+        barang=input.next();
+        
+         switch(barang){
+             case "pensil":harga=2000;break;
+             case "buku":harga=3000;break;
+             case "penghapus":harga=500;break;                  
+         }
+         System.out.print("Masukkan uang anda: ");
+         uang=input.nextInt();
+         
+         if(uang>=harga){
+         kembalian=uang-harga;
+             System.out.println("Kembalian: "+kembalian);
+                 }else if(uang<harga){
+                 System.out.println("Mohon maaf uang anda kurang");              
+}
+         System.out.println("");
+         System.out.println("Terima kasih sudah berbelanja di toko kami");
+         }
+    }
